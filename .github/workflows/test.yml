@@ -33,8 +33,10 @@ jobs:
         with:
           # runs 'bundle install' and caches installed gems automatically
           bundler-cache: true
-      - name: Run RuboCop
-        run: bundle exec rubocop --parallel
+      - name: Rubocop Linter Action
+        uses: andrewmcodes/rubocop-linter-action@v3.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Set up Node
         uses: actions/setup-node@v2
         with:
