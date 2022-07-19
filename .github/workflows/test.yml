@@ -33,6 +33,8 @@ jobs:
         with:
           # runs 'bundle install' and caches installed gems automatically
           bundler-cache: true
+      - name: Run RuboCop
+        run: bundle exec rubocop --parallel
       - name: Set up Node
         uses: actions/setup-node@v2
         with:
@@ -51,9 +53,5 @@ jobs:
         run: |
           cp config/database.github.yml config/database.yml
           bundle exec rails db:create db:migrate
-      - name: Rubocop Linter Action
-        uses: andrewmcodes/rubocop-linter-action@v3.0.0.rc2
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run tests
         run: bundle exec rspec
