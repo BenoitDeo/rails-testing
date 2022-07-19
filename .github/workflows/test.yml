@@ -48,7 +48,7 @@ jobs:
       - name: Yarn install
         run: yarn install --frozen-lockfile
       - name: Run linter
-        run: bundle exec rubocop
+        run: rubocop
       - name: Prepare DB
         run: |
           cp config/database.github.yml config/database.yml
