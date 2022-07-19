@@ -12,6 +12,9 @@ AllCops:
     - 'Gemfile'
     - 'spec/spec_helper.rb'
 
+inherit_gem:
+  rubocop-discourse: default.yml
+
 Style/ConditionalAssignment:
   Enabled: false
 Style/StringLiterals:
@@ -42,3 +45,4 @@ Style/EmptyMethod:
   Enabled: false
 Bundler/OrderedGems:
   Enabled: false
+
