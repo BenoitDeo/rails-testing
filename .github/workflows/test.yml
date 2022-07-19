@@ -47,8 +47,6 @@ jobs:
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
       - name: Yarn install
         run: yarn install --frozen-lockfile
-      - name: Run linter
-        run: bundle exec rubocop
       - name: Prepare DB
         run: |
           cp config/database.github.yml config/database.yml
