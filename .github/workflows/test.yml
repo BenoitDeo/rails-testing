@@ -51,7 +51,9 @@ jobs:
         run: |
           cp config/database.github.yml config/database.yml
           bundle exec rails db:create db:migrate
-      - name: Run tests
-        run: rubocop
+      - name: Rubocop Linter Action
+        uses: andrewmcodes/rubocop-linter-action@v3.0.0.rc2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Run tests
         run: bundle exec rspec
