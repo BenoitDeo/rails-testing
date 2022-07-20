@@ -11,6 +11,7 @@ AllCops:
     - 'test/**/*'
     - 'Gemfile'
     - 'spec/spec_helper.rb'
+    - 'vendor/bundle/**/*'
 
 Style/ConditionalAssignment:
   Enabled: false
