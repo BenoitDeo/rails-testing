@@ -3,4 +3,6 @@ class ProductsController < ApplicationController
     @product = Product.new
     @product.save!
   end
+
+  def new; end
 end
