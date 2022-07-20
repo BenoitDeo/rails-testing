@@ -9,6 +9,9 @@ AllCops:
     - 'support/**/*'
     - 'tmp/**/*'
     - 'test/**/*'
+    - 'Gemfile'
+    - 'spec/spec_helper.rb'
+    - 'vendor/bundle/**/*'
 
 Style/ConditionalAssignment:
   Enabled: false
@@ -40,3 +43,4 @@ Style/EmptyMethod:
   Enabled: false
 Bundler/OrderedGems:
   Enabled: false
+

@@ -51,5 +51,7 @@ jobs:
         run: |
           cp config/database.github.yml config/database.yml
           bundle exec rails db:create db:migrate
+      - name: Run linter
+        run: bundle exec rubocop
       - name: Run tests
         run: bundle exec rspec
